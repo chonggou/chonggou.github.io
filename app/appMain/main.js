@@ -4,8 +4,6 @@
 define([
 ],function(
 ) {
-	//var projectName = '';//使用相对路径寻找资源,目前使用相对路径，不需要配置
-	//var projectName = srcParentDirectory;//使用相对路径寻找资源,目前使用相对路径，不需要配置
 	/**
 	@description 定义Kai路径和应用层包路径
 	*/
@@ -108,14 +106,6 @@ define([
 							'custom/dijit/RestLocationSelector':{
 								restStores: locationRestStores
 							},
-							/*
-							'custom/dgrid/cdgrid':{
-								models:models//使用应用层models
-							},
-							'plugin/custom/imagescanutil':{
-								models:models//使用应用层models
-							}
-							*/
 						}
 					});
 					var app = _.extend({
@@ -130,7 +120,6 @@ define([
 				});
 			});
 			console.log('kaiMain/main required');
-			//alert('kaiMain/main required');
-			});
+		});
 	});
 });
