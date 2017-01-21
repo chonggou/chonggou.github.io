@@ -1,12 +1,10 @@
 /*登录*/
 define([
   'page/viewFactory',
-  'appViewUtils/index',
+  'appViewUtils/login',
   './events/events',
   //'dataHelper/login',//TBD
   'cutil/c.util.validate',
-  'css!./res/style/h5.css',
-
 ],
 function (
   CommonPageFactory,
@@ -19,6 +17,8 @@ function (
   "use strict";
   var baseview = CommonPageFactory.create('appBaseView');
   var View = baseview.extend({
+    //是否显示title
+    showHeader:true,
 
     /*可以冒泡的事件可以绑定在这里 delegate*/
     events: {
@@ -63,25 +63,6 @@ function (
 
     prepareViewData: function () {
       var self = this;
-      self.viewData.taskList = [{
-        customerName:'陈祥云',
-        delayDays:'4',
-        delayAmount:50000,
-        id:'00000000'
-      },
-      {
-        customerName:'陈祥云',
-        delayDays:'4',
-        delayAmount:40000,
-        id:'00000001'
-      },
-      {
-        customerName:'陈祥云',
-        delayDays:'4',
-        delayAmount:30000,
-        id:'00000002'
-      }
-    ];
       self.turnOn();
     },
 
@@ -106,43 +87,35 @@ function (
       self.hideLoading();
     },
 
-    getVueInitParams:function(){
+    getVueData:function(){
       var self = this;
       return {
-        data: {
-          formData: self.memoryStore.getAttr('memory.formData') || {},//表单数据
-          taskList:self.viewData.taskList
-        },
-        methods: {
-          gotoCustomerDetail:function(accountId,event){
-            self.model.trigger('gotoCustomerDetail',accountId);//前往客户详情页面
-          },
-          greet: function (event) {
-            // `this` inside methods point to the Vue instance
-            alert('Hello ' + this.name + '!')
-            // `event` is the native DOM event
-            alert(event.target.tagName)
-          }
-        }
-      };
+        formData: self.memoryStore.getAttr('memory.formData') || {},//表单数据
+        baseUrl:appPrefx
+      }
     },
-    parseTempate:function(){//提前重新处理模版
+
+    getVueMethods:function(){
       var self = this;
-      var templateFn = _.template(
-        "<%_.each(childViewItems,function(viewItem){%>" +
-        "<h2><%=viewItem.viewTitle%></h2>"+
-        "<div data-viewname='<%=viewItem.id%>'>" +
-        "<a data-dojo-type='dijit/layout/LinkPane' id='<%=viewItem.id%>'>"+
-        "</a>" +
-        "</div>" +
-        "<%});%>"
-      );
-      var appendedNodes = templateFn({
-        childViewItems:self.childViewItems
-      });//TBD
-      //self.$el.find('.viewContainer').append(appendedNodes);//update template to a destination one
-      self.$el.append(appendedNodes);//update template to a destination one
-    },
+      return {
+        goRegister:function(){
+          //self.model.trigger('goRegister');
+          self.goRegister();
+        },
+        setCellphoneNumberInputClicked:function(){
+          this.cellphoneNumberInputClicked = true;
+        },
+        isValidCellphoneNumber:function(cellphoneNumber){
+          return validate.isMobile(cellphoneNumber);
+        },
+        isValidUserName:function(){
+
+        },
+        isValidPassword:function(){
+          
+        }
+      }
+    }
   });
   return View;
 });

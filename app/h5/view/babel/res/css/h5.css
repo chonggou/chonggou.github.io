@@ -1,18 +1,20 @@
 /*
 Error: File to import not found or unreadable: compass/css3.
-       Load path: /Users/cloud/gitlab/accounts/public/accounts/app/h5/view/index/res/sass
-        on line 3 of /Users/cloud/gitlab/accounts/public/accounts/app/h5/view/index/res/sass/h5.scss
+       Load path: /Users/cloud/gitlab/accounts/public/accounts/app/h5/view/login/res/sass
+        on line 4 of /Users/cloud/gitlab/accounts/public/accounts/app/h5/view/login/res/sass/h5.scss
 
-1: @import "util/functions";
-2: @import "util/css3";
-3: @import "compass/css3";
-4: /*project global css style*\/
+1: 
+2: @import "util/functions";
+3: @import "util/css3";
+4: @import "compass/css3";
 5: 
-6: /*pages style*\/
-7: @import "pages/pages";
+6: $rem-base: 40px;
+7: $main-color:#f74e61;
+8: $main-dark-color:#EC475A;
+9: $mascotList-width:226;
 
 Backtrace:
-/Users/cloud/gitlab/accounts/public/accounts/app/h5/view/index/res/sass/h5.scss:3
+/Users/cloud/gitlab/accounts/public/accounts/app/h5/view/login/res/sass/h5.scss:4
 /Users/cloud/Downloads/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/import_node.rb:66:in `rescue in import'
 /Users/cloud/Downloads/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/import_node.rb:45:in `import'
 /Users/cloud/Downloads/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -50,4 +52,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: compass/css3.\A        Load path: /Users/cloud/gitlab/accounts/public/accounts/app/h5/view/index/res/sass\A         on line 3 of /Users/cloud/gitlab/accounts/public/accounts/app/h5/view/index/res/sass/h5.scss\A \A 1: @import \"util/functions\";\A 2: @import \"util/css3\";\A 3: @import \"compass/css3\";\A 4: /*project global css style*/\A 5: \A 6: /*pages style*/\A 7: @import \"pages/pages\";"; }
+  content: "Error: File to import not found or unreadable: compass/css3.\A        Load path: /Users/cloud/gitlab/accounts/public/accounts/app/h5/view/login/res/sass\A         on line 4 of /Users/cloud/gitlab/accounts/public/accounts/app/h5/view/login/res/sass/h5.scss\A \A 1: \A 2: @import \"util/functions\";\A 3: @import \"util/css3\";\A 4: @import \"compass/css3\";\A 5: \A 6: $rem-base: 40px;\A 7: $main-color:#f74e61;\A 8: $main-dark-color:#EC475A;\A 9: $mascotList-width:226;"; }
