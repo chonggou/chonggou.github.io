@@ -1,14 +1,11 @@
-/*
- 页面名称：重审申请
- 作者：chenxiangyun01@company.com
+/**
+ @description
  */
  define([
    "dojo/on",
-   'appViewUtils/login',
    'cutil/c.util.validate',
  ], function (
    on,
-   viewUtils,
    validate
  ) {
    "use strict";
@@ -18,7 +15,7 @@
         subscribeTopics: function () {
           var self = this;
         },
-        
+
         /*绑定事件*/
         bindEvents: function () {
           var self = this;

@@ -22,8 +22,6 @@ function (
 
     /*可以冒泡的事件可以绑定在这里 delegate*/
     events: {
-      //'click .js_button_sendVerifyCode': _.debounce(viewUtils.sendVerifyCode,250,true,function(){}),
-      'click .js_button_login': _.debounce(viewUtils.login,250,true,function(){})
     },
 
     onCreate: function () {//初次加载时候使用
@@ -31,22 +29,6 @@ function (
     },
 
     els:{
-      'sendVerifyCodeButton':{//发送验证码按钮
-        selector:'.js_button_sendVerifyCode',
-        type:'jquery'
-      },
-      'cellphoneErrorIconNode':{//发送验证码按钮
-        selector:'.js_cellphone_container .weui_icon_warn',
-        type:'jquery'
-      },
-      'cellphoneSuccessIconNode':{//发送验证码按钮
-        selector:'.js_cellphone_container .weui_icon_success_no_circle',
-        type:'jquery'
-      },
-      'loginButton':{
-        selector:'.js_button_login',
-        type:'jquery'
-      }
     },
 
     onShow: function () {//在再显示时候调用 在 create之后调用
@@ -112,7 +94,7 @@ function (
 
         },
         isValidPassword:function(){
-          
+
         }
       }
     }

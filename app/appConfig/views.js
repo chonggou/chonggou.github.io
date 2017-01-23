@@ -15,7 +15,7 @@ define([
   h5 start
   */
   {id:'h5/view/mobile_index',parent:'h5/view/index',viewName:'mobile_index',useModule:true,viewTitle:'主页',isDefault:true,indexLevel:true},
-  {id:'h5/view/babel',parent:'h5/view/index',viewName:'babel',useModule:true,viewTitle:'通天塔如何建成',isDefault:true,indexLevel:true},
+  {id:'h5/view/babel',parent:'h5/view/index',viewName:'babel',useModule:true,viewTitle:'通天塔如何建成',isDefault:false,indexLevel:true},
   /*
   h5 end
   */

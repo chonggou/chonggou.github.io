@@ -1,5 +1,5 @@
 /**
-base view for h5
+@description base view for h5
 */
 define([
   'kaiView/viewUtils/index',
@@ -47,87 +47,6 @@ function(
 
   _.extend(extension,kaiViewIndexViewUtils,indexViewUtils,
     {
-      /**
-
-      */
-      login:function(){
-        var self = this;
-        self.showLoginDialog();
-      },
-      /*弹出登录框*/
-      showLoginDialog:function(){
-        var self = this;
-        if(!self.loginDialogInstance){
-          self.loginDialogInstance = new loginDialog({
-            view:self
-          });
-        }
-        self.loginDialogInstance.startup();
-        self.loginDialogInstance.show();
-        Kai.hideLoading();
-      },
-
-      /*注销*/
-      logout:function(){
-        var self = this;
-        var _logoutComm = Models.logout.getInstance();//
-        self.showLoading();
-        var onSuccess = function(res){
-          self.hideLoading();
-          if(self.isSucceedResponse(res)){
-            self.showToast({
-              text:'注销成功',
-              callback:function(){
-                UserStore.remove();
-                _.isObject(localStorage) && localStorage.clear();
-                self.forward(Kai.loginUrl,{
-                  keepURL:true
-                });
-              }
-            });
-          }else{
-            self.showResponseError(res);
-          }
-        };
-        var onError = function(res){
-          self.hideLoading();
-          self.showResponseError(res);
-        };
-        var getParams = function(){
-        };
-        var postParams = getParams();
-        _logoutComm.execute(onSuccess,onError,true,self);
-      },
-
-      prepareDebugData:function(){
-        var self = this;
-        var queryObj = self.getQueryObj();
-        if(queryObj.applycode){
-          self.applyCode = queryObj.applycode;/*如果页面中存在applycode将优先被使用*/
-        }
-      },
-
-      setUbtData:function(state){
-        var self = this;
-        self.ubtData = {
-          current:state || "*",
-          applyCode:self.model.get('applyCode') || "*",
-        };
-      },
-
-      /*
-      获得员工号
-      */
-      getStaffNumber:function(){
-        var self = this;
-        var UserStore = CommonStore.UserStore.getInstance();
-        var headStore = CommonStore.HeadStore.getInstance();
-        return (UserStore.get() || {}).user.username;
-      },
-
-      getStaffRole:function(){
-        var self = this;
-      }
     }
   );
   return extension;

@@ -89,11 +89,11 @@ define([
 			kaiMainDefer.then(function(controller){
 				require([
 					//'pc/model/models',//title定义
-					'dojo/has!isH5?appRestStore/location:appRestStore/location',
+					//'dojo/has!isH5?appRestStore/location:appRestStore/location',
 					'dojo/has!isH5?h5/page/appBaseViewExtension:pc/page/appBaseViewExtension',
 					'dojo/has!isH5?css!h5/res/style/h5:css!pc/res/style/pc',
 				],function(
-					locationRestStores,
+					//locationRestStores,
 					//models,
 					viewExtension
 				){
@@ -104,7 +104,7 @@ define([
 							配置传递给kai的信息
 							*/
 							'custom/dijit/RestLocationSelector':{
-								restStores: locationRestStores
+								//restStores: locationRestStores
 							},
 						}
 					});

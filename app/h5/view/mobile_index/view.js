@@ -3,7 +3,7 @@ define([
   'kaiView/h5/view/mobile_index/view',
   'page/viewFactory',
   'appViewUtils/index',
-  'appViewUtils/mobile_index',
+  //'appViewUtils/mobile_index',
   './events/events',
   'cutil/c.util.validate',
 ],
@@ -11,7 +11,7 @@ function (
   kaiViewMobileIndex,
   CommonPageFactory,
   indexViewUtils,
-  viewUtils,
+  //viewUtils,
   Events,
   validate
 ) {
@@ -64,7 +64,7 @@ function (
 
     prepareViewUtils:function(){
       var self = this;
-      self.viewUtils = _.extend({},indexViewUtils,viewUtils);
+      self.viewUtils = _.extend({},indexViewUtils);
     },
 
     prepareDataHelper:function(){
@@ -87,43 +87,6 @@ function (
           baseUrl:appPrefx
         },
         methods: {
-          gotoStatisticsSearch:function(event){
-            alert('go to statistics search');
-            self.forward('h5/view/statistics_search');
-          },
-          gotoStatistics:function(event){
-            self.forward('h5/view/statistics');
-          },
-          gotoExpensesList:function(event){
-            self.forward('h5/view/expenses_list');
-          },
-          gotoIncomesList:function(event){
-            self.forward('h5/view/incomes_list');
-          },
-          gotoIncomes:function(accountId,event){
-            self.forward('h5/view/incomes');
-          },
-          gotoPhoneCollection:function(accountId,event){
-            self.model.trigger('gotoPhoneCollection',accountId);//前往电催作业
-          },
-          gotoCustomerSearch:function(accountId,event){
-            self.model.trigger('gotoCustomerSearch',accountId);//前往客户查询页面
-          },
-          gotoCollectionPerformance:function(accountId,event){
-            self.model.trigger('gotoCollectionPerformance',accountId);//前往业绩页面
-          },
-          gotoOutboundCollection:function(accountId,event){
-            self.model.trigger('gotoOutboundCollection',accountId);//前往外访页面
-          },
-          gotoSystemNotification:function(event){
-            self.model.trigger('gotoSystemNotification',event);//前往系统通知页面
-          },
-          gotoDiscuss:function(event){
-            self.model.trigger('gotoDiscuss',event);//前往系统通知页面
-          },
-          gotoRecommendedShops:function(event){
-            self.gotoPage('h5/view/recommendedShops',event);
-          }
         }
       };
     },

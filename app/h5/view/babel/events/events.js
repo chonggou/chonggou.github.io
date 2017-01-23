@@ -4,11 +4,11 @@
  */
  define([
    "dojo/on",
-   'appViewUtils/login',
+   //'appViewUtils/login',
    'cutil/c.util.validate',
  ], function (
    on,
-   viewUtils,
+   //viewUtils,
    validate
  ) {
    "use strict";
@@ -25,7 +25,6 @@
           var self = this;
           //输入框校验
           self.bind({
-            'input paste keyup keydown change focus blur .js_input_cellphone': viewUtils.checkPhoneInput,/*电话号码检查*/
             'blur .js_input_name': viewUtils.checkNameInput/*姓名检查*/
           });
 
