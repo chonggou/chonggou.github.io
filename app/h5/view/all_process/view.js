@@ -1,19 +1,13 @@
 /**
-@description
+@description 何时需要重构
 */
 define([
   'page/viewFactory',
-  //'appViewUtils/login',
   './events/events',
-  //'dataHelper/login',//TBD
-  //'cutil/c.util.validate',
 ],
 function (
   CommonPageFactory,
-  //viewUtils,
   Events//,
-  //dataHelper,//TBD
-  //validate
 ) {
 
   "use strict";
@@ -70,20 +64,6 @@ function (
       var self = this;
       self.hideLoading();
     },
-
-    getVueData:function(){
-      var self = this;
-      return {
-        formData: self.memoryStore.getAttr('memory.formData') || {},//表单数据
-        baseUrl:appPrefx
-      }
-    },
-
-    getVueMethods:function(){
-      var self = this;
-      return {
-      }
-    }
   });
   return View;
 });
