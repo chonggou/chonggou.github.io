@@ -29,6 +29,10 @@ function(
     */
     'initialize': function() {
       var superclass = this['super'].initialize.apply(this, arguments);
+      this.debugData = {
+        isDebug:true,
+        isLogin:true
+      };
       //处理自己的事情
       return superclass;
     },
