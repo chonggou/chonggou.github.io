@@ -23,16 +23,6 @@
           var self = this;
           //输入框校验
           self.bind({
-            'blur .js_input_name': viewUtils.checkNameInput/*姓名检查*/
-          });
-
-          self.els.loginButton.on('click',function(){
-            /*
-            self.showToast({
-              text:'cxx'
-            });
-            */
-            //self.model.trigger('login');
           });
         }
       };

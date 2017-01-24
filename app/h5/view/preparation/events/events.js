@@ -4,9 +4,11 @@
  */
  define([
    "dojo/on",
+   //'appViewUtils/login',
    'cutil/c.util.validate',
  ], function (
    on,
+   //viewUtils,
    validate
  ) {
    "use strict";
@@ -23,7 +25,6 @@
           var self = this;
           //输入框校验
           self.bind({
-            'blur .js_input_name': viewUtils.checkNameInput/*姓名检查*/
           });
 
           self.els.loginButton.on('click',function(){

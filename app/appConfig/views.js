@@ -18,6 +18,9 @@ define([
   {id:'h5/view/babel',parent:'h5/view/index',viewName:'babel',useModule:true,viewTitle:'通天塔如何建成',isDefault:false,indexLevel:true},
   {id:'h5/view/all_process',parent:'h5/view/index',viewName:'all_process',useModule:true,viewTitle:'何时需要重构',isDefault:false,indexLevel:true},
   {id:'h5/view/preparation',parent:'h5/view/index',viewName:'preparation',useModule:true,viewTitle:'重构的准备',isDefault:false,indexLevel:true},
+  {id:'h5/view/methods',parent:'h5/view/index',viewName:'methods',useModule:true,viewTitle:'重构之术',isDefault:false,indexLevel:true},
+  {id:'h5/view/epilogue',parent:'h5/view/index',viewName:'epilogue',useModule:true,viewTitle:'多余的话',isDefault:false,indexLevel:true},
+  {id:'h5/view/instance',parent:'h5/view/index',viewName:'instance',useModule:true,viewTitle:'重构实例',isDefault:false,indexLevel:true},
   /*
   h5 end
   */

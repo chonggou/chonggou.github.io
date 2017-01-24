@@ -29,6 +29,22 @@ function (
     },
 
     els:{
+      'sendVerifyCodeButton':{//发送验证码按钮
+        selector:'.js_button_sendVerifyCode',
+        type:'jquery'
+      },
+      'cellphoneErrorIconNode':{//发送验证码按钮
+        selector:'.js_cellphone_container .weui_icon_warn',
+        type:'jquery'
+      },
+      'cellphoneSuccessIconNode':{//发送验证码按钮
+        selector:'.js_cellphone_container .weui_icon_success_no_circle',
+        type:'jquery'
+      },
+      'loginButton':{
+        selector:'.js_button_login',
+        type:'jquery'
+      }
     },
 
     onShow: function () {//在再显示时候调用 在 create之后调用
@@ -56,7 +72,7 @@ function (
 
     prepareViewUtils:function(){
       var self = this;
-      //self.viewUtils = viewUtils;
+      self.viewUtils = viewUtils;
     },
 
     prepareDataHelper:function(){
@@ -80,6 +96,22 @@ function (
     getVueMethods:function(){
       var self = this;
       return {
+        goRegister:function(){
+          //self.model.trigger('goRegister');
+          self.goRegister();
+        },
+        setCellphoneNumberInputClicked:function(){
+          this.cellphoneNumberInputClicked = true;
+        },
+        isValidCellphoneNumber:function(cellphoneNumber){
+          return validate.isMobile(cellphoneNumber);
+        },
+        isValidUserName:function(){
+
+        },
+        isValidPassword:function(){
+
+        }
       }
     }
   });
