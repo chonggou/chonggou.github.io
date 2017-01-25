@@ -27,7 +27,6 @@ define([
 			/**
 			本地址资源路径配置
 			*/
-
 			{
 				name: 'appConfig',
 				location: appPrefix + './app/appConfig',
@@ -40,23 +39,8 @@ define([
 			},
 
 			{
-				name: 'dataHelper',
-				location: appPrefix + './app/dataHelper',
-			},
-
-			{
-				name: 'viewUtils',
-				location:appPrefix + './app/viewUtils',
-			},
-
-			{
 				name: 'appViewUtils',
 				location:appPrefix + './app/appViewUtils',
-			},
-
-			{
-				name: 'pc',
-				location: appPrefix + './app/pc',
 			},
 
 			{

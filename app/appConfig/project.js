@@ -6,7 +6,7 @@ define([],function() {
   /*project related directory definition start*/
   var projectConfig = {
     projectName:'pc',//project app name
-    title:'管理系统',
+    title:'',
     loginUrl:dojoConfig.isH5?'h5/view/login':'pc/view/login',//login url
     indexUrl:dojoConfig.isH5?'h5/view/index':'pc/view/index',//index url
     //errorUrl:'pc/error',
