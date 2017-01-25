@@ -1,5 +1,5 @@
 /**
-@description 重构之术
+@description 重构之术 -- 移除全局变量
 */
 define([
   'page/viewFactory',
