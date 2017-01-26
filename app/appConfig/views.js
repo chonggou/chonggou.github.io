@@ -23,6 +23,8 @@ define([
   {id:'h5/view/instance',parent:'h5/view/index',viewName:'instance',useModule:true,viewTitle:'重构实例',isDefault:false,indexLevel:true},
   {id:'h5/view/code_standards',parent:'h5/view/index',viewName:'code_standards',useModule:true,viewTitle:'编码规范',isDefault:false,indexLevel:true},
   {id:'h5/view/methods_global',parent:'h5/view/index',viewName:'methods_global',useModule:true,viewTitle:'重构之术－移除全局变量',isDefault:false,indexLevel:true},
+  {id:'h5/view/methods_utils',parent:'h5/view/index',viewName:'methods_utils',useModule:true,viewTitle:'重构之术－提取公共函数',isDefault:false,indexLevel:true},
+  {id:'h5/view/methods_component',parent:'h5/view/index',viewName:'methods_component',useModule:true,viewTitle:'重构之术－组件化',isDefault:false,indexLevel:true},
   /*
   h5 end
   */
