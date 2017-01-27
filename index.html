@@ -108,6 +108,8 @@
     })(),
     async: true,
     popup:true,
+    kaiPrefix:kaiPrefx,
+    appPrefix:appPrefix,
     //baseUrl:'./',
     baseUrl:(function(){//设置默认寻址路径 指向项目根目录
       if(location.pathname.indexOf('app') >= 0){//开发环境
@@ -124,7 +126,8 @@
         ///*
         kaiPrefx = 'https://kaijs.github.io/';//需要以/结尾
         //kaiPrefx = '../../../../kaijs/';//需要以/结尾 相对于项目的根目录计算路径
-        //kaiPrefx = '../../../../';//需要以/结尾 相对于项目的根目录计算路径
+        //kaiPrefx = '../../../../kai/dest/';//需要以/结尾 相对于项目的根目录计算路径
+        //kaiPrefx = '../../../../kai/0.1/dist/';//需要以/结尾 相对于项目的根目录计算路径
         appPrefix = './';//需要以/结尾
         //*/
         //kaiPrefx = srcParentDirectory;//需要以/结尾
@@ -140,7 +143,6 @@
     tlmSiblingOfDojo:true,
     has: {
       "debugAtAllCosts": true,
-
       "dojo-firebug": true,
       "dojo-amd-factory-scan":true,
       "dojo-debug-messages": true,
@@ -171,7 +173,7 @@
     }
   };//dojo config end
   var appPrefx = appPrefix;
-  var kaiScriptsPath = dojoConfig.baseUrl + kaiPrefx + 'kai/' + version + '/scripts';
+  var kaiScriptsPath = dojoConfig.baseUrl + kaiPrefx + 'kai/' + version + '/scripts/';
   loadScript({
     url: kaiScriptsPath + '/dojo/dojo.js',//根据index.html来路径
     async:true,
